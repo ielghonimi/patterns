@@ -4,6 +4,7 @@ public class Inspector {
 
     String inspectVehicle(String vehicleType, int miles) {
         String report = "Type:  " + vehicleType + " (miles: " + miles + ") \n";
+        Vehicle vehicle = null;
         switch (vehicleType) {
             case "car":
                 report += """
@@ -20,13 +21,12 @@ public class Inspector {
                         """;
                 break;
             case "18-wheeler":
-                report +="""
-                    Tires: 115 psi (all 18)
-                    Oil: full (15 Gallons)
-                    Exhaust Tubes: Intact (2)
-                    """;
+                vehicle = new EighteenWheeler();
                 break;
 
+        }
+        if(vehicle != null) {
+            report = vehicle.inspect(miles);
         }
 
         return report;

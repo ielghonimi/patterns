@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class InputScanner {
     private final Scanner scanner = new Scanner(System.in);
-    public static final String VEHICLE_TYPE = """
+    private static final String VEHICLE_TYPE = """
             Select vehicle type:
             Enter 1, 2, or 3 (9 to exit)
             1 for car
@@ -15,7 +15,7 @@ public class InputScanner {
     private static final Map<Integer, String> types = Map.of(1, "car",
             2, "motorcycle",
             3, "18-wheeler");
-    public static final String MILES_MESSAGE = "Enter number of miles";
+    private static final String MILES_MESSAGE = "Enter number of miles";
 
    public InputValues getInputValues() {
        try {
