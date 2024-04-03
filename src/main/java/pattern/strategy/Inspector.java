@@ -2,8 +2,6 @@ package pattern.strategy;
 
 public class Inspector {
 
-    String NEW_LINE = "\n";
-
     String inspectVehicle(String vehicleType, int miles) {
         String report = "Type:  " + vehicleType + " (miles: " + miles + ") \n";
         switch (vehicleType) {
