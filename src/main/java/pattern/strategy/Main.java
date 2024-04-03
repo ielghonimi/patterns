@@ -3,7 +3,7 @@ package pattern.strategy;
 public class Main {
 
     private static final Inspector inspector = new Inspector();
-    public static final String ERROR_MESSAGE = "You must enter 1, 2, or 3 (or 9 to exit)";
+    private static final String ERROR_MESSAGE = "You must enter 1, 2, or 3 (or 9 to exit)";
 
     public static void main(String[] args) {
         InputScanner inputScanner = new InputScanner();
